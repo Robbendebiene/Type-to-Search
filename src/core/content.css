@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+:root {
+  --top: 5vh;
+  --width: 90vw;
+  --maxWidth: 600px;
+  --iconSize: 32px;
+  --searchbarPadding: 1rem;
+  --backgroundColor: #fff;
+}
+
+#searchForm {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  margin: var(--top) auto 0 auto;
+  width: var(--width);
+  max-width: var(--maxWidth);
+  border-radius: 0.25rem;
+  overflow: hidden;
+  box-shadow: 0px 0px 5px rgba(0,0,0,0.4);
+  background: var(--backgroundColor);
+  animation-duration: .3s;
+}
+
+#searchForm::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  background: linear-gradient(to bottom, var(--backgroundColor) 0, rgba(0,0,0,0) var(--searchbarPadding)), linear-gradient(to top, var(--backgroundColor) 0, rgba(0,0,0,0) var(--searchbarPadding));
+  pointer-events: none;
+}
+
+#searchBar {
+  flex-basis: 0;
+  flex-grow: 1;
+  font-size: 1.3rem;
+  padding: var(--searchbarPadding) 0 var(--searchbarPadding) var(--searchbarPadding);
+  border: none;
+  
+  /* required to remove intrinsic input size */
+  min-width: 0;
+}
+
+#searchButton {
+  padding: 0 var(--searchbarPadding);
+  width: var(--iconSize);
+  box-sizing: content-box;
+  border: none;
+  background: none;
+  cursor: pointer;
+  contain: content;
+}
+
+#searchEnginesList {
+  position: relative;
+  transform: translateY(calc(var(--translateY, 0) * 1%));
+  height: 100%;
+
+  /* this is used to trigger reflow on fast style changes */
+  backface-visibility: hidden;
+
+  list-style: none;
+}
+
+#searchEnginesList .search-engine-item {
+  position: absolute;
+  top: calc(var(--positionTop, 0) * 1%);
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+}
+
+#searchEnginesList .search-engine-icon {
+  max-height: 100%;
+  width: var(--iconSize);
+  object-fit: scale-down;
+}
+
+
+@keyframes slideIn {
+  from {
+    transform: translateY(calc(-0.5 * var(--top)));
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes slideOut {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(calc(-0.5 * var(--top)));
+  }
+}

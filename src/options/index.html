@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="layout.css">
+    <script src="options.js" type="module"></script>
+  </head>
+
+  <body>
+    <div class="panel">
+      <label for="triggerKeyInput">Trigger Key</label>
+      <div class="input-wrapper" title="An optional keyboard key that needs to be pressed to open the search bar. Otherwise the search bar opens on any character key press and will contain that key.">
+        <input type="text" name="triggerKey" placeholder="Any character key" id="triggerKeyInput" />
+        <button id="clearTriggerKeyButton" type="button">Clear</button>
+      </div>
+    </div>
+    <div class="panel">
+      <label for="searchTargetTabSelect">Search target tab</label>
+      <div class="select-wrapper" title="The tab to execute the search in.">
+        <select name="searchTargetTab" id="searchTargetTabSelect">
+          <option value="current">Current tab</option>
+          <option value="after" selected="true">New tab after current</option>
+          <option value="before">New tab before current</option>
+          <option value="start">New tab at the start</option>
+          <option value="end">New tab at the end</option>
+        </select>
+      </div>
+    </div>
+  </body>
+</html>

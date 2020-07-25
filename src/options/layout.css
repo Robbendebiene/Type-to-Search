@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.panel {
+  margin-top: 1rem;
+}
+
+.panel label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.panel input,
+.panel select {
+  padding: 0.5rem;
+  box-sizing: border-box;
+  min-width: 0;
+  width: 100%;
+  border: none;
+  background: none;
+  appearance: none;
+  -moz-appearance: none;
+}
+
+.input-wrapper {
+  display: flex;
+  border-radius: 0.25rem;
+  border: solid 1px lightgray;
+}
+
+.input-wrapper > button {
+  background: none;
+  border: none;
+  border-left: 1px solid lightgray;
+  padding: 0 1.5rem;
+}
+
+.input-wrapper > button:hover {
+  background-color: lightgray;;
+}
+
+.select-wrapper {
+  position: relative;
+  border-radius: 0.25rem;
+  border: solid 1px lightgray;
+}
+
+.select-wrapper::after {
+  content: "⌄";
+  position: absolute;
+  right: 0.5rem;
+  top: 0;
+  bottom: 0;
+  font-size: 30px;
+  line-height: 80%;
+  pointer-events: none;
+}

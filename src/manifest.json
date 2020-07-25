@@ -1,0 +1,46 @@
+{
+  "manifest_version": 2,
+  "name": "Type to Search",
+  "version": "1.0.0",
+  "description": "Your next web search is just a key away. Just type on your keyboard to open a search bar and search with one of your search engines.",
+  "author": "Robbendebiene",
+  "homepage_url": "https://github.com/Robbendebiene/Type-to-Search",
+  "icons": {
+    "96": "resources/iconx96.png",
+    "48": "resources/iconx48.png",
+    "32": "resources/iconx32.png"
+  },
+  "permissions": [
+    "<all_urls>",
+    "search",
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "run_at": "document_start",
+      "match_about_blank": true,
+      "js": [
+        "core/top.frame.js"
+      ]
+    },
+    {
+      "matches": ["<all_urls>"],
+      "run_at": "document_start",
+      "match_about_blank": true,
+      "all_frames": true,
+      "js": [
+        "core/content.js"
+      ]
+    }
+  ],
+  "background": {
+    "scripts": ["core/background.js"]
+  },
+  "web_accessible_resources": [
+    "core/content.html"
+  ],
+    "options_ui": {
+    "page": "options/index.html"
+  }
+}
