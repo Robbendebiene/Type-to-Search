@@ -2,10 +2,9 @@
 [<img align="right" src="https://img.shields.io/amo/users/type-to-search.svg">](https://addons.mozilla.org/firefox/addon/type-to-search/statistics)
 [<img align="right" src="https://img.shields.io/github/release/robbendebiene/type-to-search.svg">](https://github.com/Robbendebiene/Type-to-Search/releases)
 [<img align="right" src="https://img.shields.io/github/license/robbendebiene/type-to-search.svg">](https://github.com/Robbendebiene/Type-to-Search/blob/master/LICENSE)
+<img align="left" src="https://github.com/Robbendebiene/Type-to-Search/blob/master/src/resources/iconx48.png">
 
-
-# <sub><img src="https://github.com/Robbendebiene/Type-to-Search/blob/master/src/resources/iconx48.png" height="38" width="38"></sub>Type to Search
-
+# Type to Search
 
 #### [<img align="right" src="https://addons.cdn.mozilla.net/static/img/addons-buttons/AMO-button_2.png">](https://addons.mozilla.org/firefox/addon/type-to-search/) Your next web search is just a key away. Just type on your keyboard to open a search bar and search with one of your search engines.
 
