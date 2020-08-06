@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Type to Search",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Your next web search is just a key away. Just type on your keyboard to open a search bar and search with one of your search engines.",
   "author": "Robbendebiene",
   "homepage_url": "https://github.com/Robbendebiene/Type-to-Search",
