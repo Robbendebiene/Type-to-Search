@@ -16,7 +16,8 @@ async function handleMessages (message, sender) {
       let tabId = null;
 
       const tabProperties = {
-        openerTabId: sender.tab.id
+        openerTabId: sender.tab.id,
+        url: "about:blank"
       };
 
       const searchTargetTab = (await browser.storage.local.get("searchTargetTab")).searchTargetTab;
