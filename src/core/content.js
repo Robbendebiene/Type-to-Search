@@ -1,19 +1,5 @@
 "use strict";
 
-const excludedTriggerKeys = [
-  'Shift',
-  'Alt',
-  'Control',
-  'Meta',
-  'ContextMenu',
-  'OS',
-  'AltGraph',
-  'Escape',
-  ' ',
-  'Dead',
-  'Enter'
-];
-
 
 let triggerKey = "";
 
@@ -56,7 +42,7 @@ function handleKeydown (event) {
     }
 
     // check if is character key
-    else if (event.code !== event.key && !excludedTriggerKeys.includes(event.key)) {
+    else if (!/\w\w/.test(event.key) && event.key !== " ") {
       pressedKey = event.key;
     }
 
