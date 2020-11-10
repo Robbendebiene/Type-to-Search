@@ -72,6 +72,7 @@ function isEditable (element) {
   const editableInputTypes = ["text", "textarea", "password", "email", "number", "tel", "url", "search"];
 
   return (
+    document.designMode === "on" ||
     element.isContentEditable ||
     (
       (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA' || element.tagName === 'SELECT')
