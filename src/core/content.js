@@ -75,7 +75,7 @@ function isEditable (element) {
     document.designMode === "on" ||
     element.isContentEditable ||
     (
-      (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA' || element.tagName === 'SELECT')
+      (element.localName === "input" || element.localName === "textarea" || element.localName === "select")
       && (!element.type || editableInputTypes.includes(element.type))
       && !element.disabled
       && !element.readOnly
